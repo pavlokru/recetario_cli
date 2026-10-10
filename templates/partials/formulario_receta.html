@@ -1,0 +1,89 @@
+<div class="space-y-4">
+    <div class="flex justify-between items-start border-b border-slate-800 pb-3">
+        <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">➕ Nueva Receta</h2>
+        <button onclick="document.getElementById('modal').classList.add('hidden')"
+            class="text-slate-400 hover:text-red-400 transition text-lg font-bold">✕</button>
+    </div>
+
+    <!-- 
+      El formulario usará hx-post a "/receta" (Ruta que crearemos en 4.3).
+      hx-encoding="multipart/form-data" es OBLIGATORIO para enviar archivos.
+    -->
+    <form hx-post="/receta" hx-target="#lista-recetas" hx-encoding="multipart/form-data"
+        hx-on::after-request="document.getElementById('modal').classList.add('hidden'); this.reset()"
+        class="space-y-3 text-sm">
+
+        <!-- Nombre -->
+        <div>
+            <label class="block text-slate-400 text-xs mb-1">Nombre de la receta *</label>
+            <input type="text" name="nombre" required placeholder="Ej: Pizza Napolitana"
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:outline-none focus:border-amber-400">
+        </div>
+
+        <!-- Grid para campos cortos -->
+        <div class="grid grid-cols-2 gap-3">
+            <div>
+                <label class="block text-slate-400 text-xs mb-1">Categoría</label>
+                <input type="text" name="categoria" placeholder="Plato principal"
+                    class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:border-amber-400 outline-none">
+            </div>
+            <div>
+                <label class="block text-slate-400 text-xs mb-1">Origen</label>
+                <input type="text" name="origen" placeholder="Italia"
+                    class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:border-amber-400 outline-none">
+            </div>
+            <div>
+                <label class="block text-slate-400 text-xs mb-1">Dificultad</label>
+                <select name="dificultad"
+                    class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:border-amber-400 outline-none">
+                    <option value="Fácil">Fácil</option>
+                    <option value="Media">Media</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-slate-400 text-xs mb-1">Tiempo (min)</label>
+                <input type="number" name="tiempo_preparacion_min" placeholder="45"
+                    class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:border-amber-400 outline-none">
+            </div>
+        </div>
+
+        <!-- Ingredientes -->
+        <div>
+            <label class="block text-slate-400 text-xs mb-1">Ingredientes (separados por coma) *</label>
+            <textarea name="ingredientes_raw" required rows="2" placeholder="Harina, agua, sal, levadura..."
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:border-amber-400 outline-none"></textarea>
+        </div>
+
+        <!-- Pasos -->
+        <div>
+            <label class="block text-slate-400 text-xs mb-1">Pasos (separados por punto) *</label>
+            <textarea name="pasos_raw" required rows="2" placeholder="Mezclar ingredientes. Amasar bien. Hornear."
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:border-amber-400 outline-none"></textarea>
+        </div>
+
+        <!-- Etiquetas -->
+        <div>
+            <label class="block text-slate-400 text-xs mb-1">Etiquetas (separadas por coma)</label>
+            <input type="text" name="etiquetas_raw" placeholder="Horno, fin de semana, vegetariano"
+                class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-slate-200 focus:border-amber-400 outline-none">
+        </div>
+
+        <!-- FOTO UPLOAD -->
+        <div
+            class="border border-dashed border-slate-700 p-3 rounded-lg bg-slate-950 hover:border-amber-400 transition cursor-pointer mt-2">
+            <label class="block text-amber-400 font-semibold text-xs mb-2">📸 Foto de la receta (Opcional)</label>
+            <!-- Tailwind tiene estilos especiales (file:) para poner guapo el botón nativo de archivos -->
+            <input type="file" name="foto" accept="image/*"
+                class="w-full text-xs text-slate-400 file:mr-4 file:py-1.5 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-slate-800 file:text-slate-200 hover:file:bg-slate-700 cursor-pointer">
+        </div>
+
+        <!-- Botón Guardar -->
+        <div class="pt-4">
+            <button type="submit"
+                class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded-lg shadow-lg transition">
+                💾 Guardar Receta
+            </button>
+        </div>
+    </form>
+</div>

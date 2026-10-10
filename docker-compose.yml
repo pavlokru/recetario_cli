@@ -1,0 +1,12 @@
+
+services:
+  recetario-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - "0.0.0.0:8080:8000"
+    restart: always  # Reinicia el contenedor automáticamente si la PC se reinicia
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload

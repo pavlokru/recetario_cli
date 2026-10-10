@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "nombre": "Chipá o Pan de Yuca",
+        "categoria": "Panadería / Snacking",
+        "origen": "Sudamérica (Paraguay/Argentina)",
+        "dificultad": "Fácil",
+        "tiempo_preparacion_min": 35,
+        "porciones": 45,
+        "ingredientes": [
+            "1000g Mix Quesos (Fresco, Sardo, Mar del Plata) (100%)",
+            "800g Almidón de yuca (80%)",
+            "200g Almidón de maíz (20%)",
+            "15g Polvo de hornear (1.5%)",
+            "15g Azúcar (1.5%)",
+            "18g Sal (1.8%)",
+            "20g Aceite de oliva (2%)",
+            "4 Huevo(s)",
+            "200g Leche (20%)"
+        ],
+        "pasos": [
+            "Mezclar todos los secos.",
+            "Incorporar huevos, leche y aceite.",
+            "Sumar los quesos picados y unir.",
+            "Formar bollos de 55g y congelar.",
+            "Hornear 20 min en freidora de aire."
+        ],
+        "etiquetas": [
+            "Horneo Rápido",
+            "Tradicional"
+        ],
+        "nota": "El horneado directo desde congelado preserva la forma y estructura final.\n   • horneado 18  min en opcion freidora de aire"
+    },
+    {
+        "id": 2,
+        "nombre": "Bondiola en Salsa al Disco",
+        "categoria": "Plato Principal / Al Disco",
+        "origen": "Argentina",
+        "dificultad": "Media",
+        "tiempo_preparacion_min": 60,
+        "porciones": null,
+        "ingredientes": [
+            "Bondiola de cerdo en fetas de 2cm",
+            "Mix Vegetales: Cebolla, morrón, ajo y apio picados gruesos",
+            "Salsa de tomate",
+            "Vino blanco o cerveza negra [Opcional]",
+            "Aceite y agua",
+            "Condimentos: Sal, orégano, pimienta y ají molido"
+        ],
+        "pasos": [
+            "Calentar el disco con aceite, sellar la carne y retirar.",
+            "Sofreír cebolla, morrón y apio; incorporar el ajo al final.",
+            "Reincorporar la carne, desglasar con vino o cerveza y condimentar.",
+            "Verter la salsa de tomate y cocinar a fuego lento.",
+            "Hidratar con agua periódicamente hasta reducir la salsa."
+        ],
+        "etiquetas": [
+            "Al Disco",
+            "Cocción Lenta",
+            "Tradicional"
+        ],
+        "nota": "La cantidad de ingredientes se ajustan a gusto según la cantidad de comensales.\n  Mantener una buena base de brasas (leña y carbón) para controlar el hervor.\n   • 1. calentar prunero el disco, ingresientes : otros carbon y leña"
+    },
+    {
+        "id": 3,
+        "nombre": "Espresso",
+        "categoria": "Café",
+        "origen": "Italia",
+        "dificultad": "Fácil",
+        "tiempo_preparacion_min": 5,
+        "porciones": 1,
+        "ingredientes": [
+            "16g Café molido fino (molienda 2.2)",
+            "60ml Agua a 93°C"
+        ],
+        "pasos": [
+            "Calibrar molienda para ratio 1:2.",
+            "Distribución y prensado uniforme.",
+            "Extraer durante 30 segundos (rendimiento ~30 ml)."
+        ],
+        "etiquetas": [
+            "Café",
+            "Bebida",
+            "Barista"
+        ],
+        "nota": "Ajustar la molienda a un punto más fino si la extracción ocurre demasiado rápido."
+    },
+    {
+        "id": 4,
+        "nombre": "Panai Integral",
+        "categoria": "Panadería",
+        "origen": "Internacional",
+        "dificultad": "Media",
+        "tiempo_preparacion_min": 120,
+        "porciones": 3,
+        "ingredientes": [
+            "500g Harina 000 (50%)",
+            "500g Harina integral (50%)",
+            "20g Salvado (2%)",
+            "40g Margarina (4%)",
+            "40g Aceite de oliva (4%)",
+            "15g Sal (1.5%)",
+            "25g Levadura (2.5%)",
+            "600g Agua a 35°C (60%)",
+            "10g Extracto de malta (1%)"
+        ],
+        "pasos": [
+            "Mezclar secos, sumar agua y amasar e integrar con margarina y aceite.",
+            "Dejar leudar hasta duplicar volumen.",
+            "Dividir en 3 bollos de 600g, desgasificar y rebozar en semillas.",
+            "Dejar leudar nuevamente.",
+            "Hornear a temperatura máxima por 40 min."
+        ],
+        "etiquetas": [
+            "Panadería",
+            "Integral",
+            "Saludable"
+        ],
+        "nota": "El agua tibia a 35°C activa eficientemente la levadura junto con el extracto de malta.\n   •  Para crear una corteza más dorada y crujiente subir el pan y aumentar 5min de calor.",
+        "imagen_url": "/static/uploads/3ce06758eda74424ad986eb69b0adcea.jpeg"
+    }
+]

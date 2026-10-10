@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-950 text-slate-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍳 Recetario Minimalista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Agregamos HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+
+<body class="h-full flex flex-col max-w-2xl mx-auto px-4 py-6 relative">
+
+    <header class="mb-6 border-b border-slate-800 pb-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-amber-400 flex items-center gap-2">
+                🍳 Recetario CLI / Web
+            </h1>
+            <p class="text-xs text-slate-400 mt-1">Interfaz ultrarrápida, oscura y minimalista</p>
+        </div>
+        <!-- Botón de Nueva Receta (Llama a HTMX para abrir el modal) -->
+        <button hx-get="/formulario_receta" 
+                hx-target="#modal-contenido" 
+                hx-on::after-request="document.getElementById('modal').classList.remove('hidden')"
+                class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2 px-4 rounded-lg shadow-lg transition flex items-center gap-2 text-sm">
+            <span>➕</span> Nueva
+        </button>
+    </header>
+
+    <main class="flex-1 space-y-6">
+        <!-- Buscador con magia HTMX -->
+        <div>
+            <input type="text" name="q" placeholder="🔍 Buscar por ingrediente, etiqueta o nombre..."
+                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                hx-get="/buscar" hx-trigger="keyup changed delay:250ms" hx-target="#lista-recetas">
+        </div>
+
+        <!-- Contenedor donde HTMX inyectará los resultados -->
+        <div id="lista-recetas" class="grid gap-3">
+            {% include 'partials/lista_recetas.html' %}
+        </div>
+    </main>
+
+    <!-- Modal Oculto para detalles -->
+    <div id="modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+        <div id="modal-contenido"
+            class="bg-slate-900 border border-slate-700 rounded-xl p-6 w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl">
+            <!-- El detalle de la receta se cargará aquí -->
+        </div>
+    </div>
+
+</body>
+
+</html>

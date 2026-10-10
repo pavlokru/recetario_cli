@@ -1,0 +1,31 @@
+{% for r in recetas %}
+<div class="bg-slate-900/80 border border-slate-800/80 hover:border-slate-700 hover:bg-slate-800 rounded-lg p-4 flex justify-between items-center transition cursor-pointer shadow-sm"
+    hx-get="/receta/{{ r.id }}" hx-target="#modal-contenido"
+    hx-on::after-request="document.getElementById('modal').classList.remove('hidden')">
+
+    <div class="space-y-1">
+        <div class="flex items-center gap-2">
+            <span class="text-xs font-mono text-amber-400">#{{ r.id }}</span>
+            <h3 class="font-semibold text-slate-100 text-base">{{ r.nombre }}</h3>
+        </div>
+        <div class="flex flex-wrap gap-3 text-xs text-slate-400">
+            <span class="flex items-center gap-1">⏱️ {{ r.tiempo_preparacion_min or 'N/A' }} min</span>
+            <span class="flex items-center gap-1">📊 {{ r.dificultad }}</span>
+            <span class="flex items-center gap-1">🏷️ {{ r.categoria }}</span>
+        </div>
+    </div>
+
+    {% if r.imagen_url %}
+    <img src="{{ r.imagen_url }}" alt="{{ r.nombre }}"
+        class="w-14 h-14 object-cover rounded-md border border-slate-700">
+    {% else %}
+    <div
+        class="w-14 h-14 bg-slate-800 rounded-md border border-slate-700 flex items-center justify-center text-xl shadow-inner">
+        🍽️</div>
+    {% endif %}
+</div>
+{% else %}
+<div class="text-center bg-slate-900 border border-slate-800 rounded-lg p-8">
+    <p class="text-slate-400 text-sm">Sin resultados encontrados.</p>
+</div>
+{% endfor %}
