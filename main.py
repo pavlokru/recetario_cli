@@ -133,3 +133,33 @@ def crear_receta(
         name="partials/lista_recetas.html",
         context={"recetas": recetas},
     )
+# --- RUTA PARA AGREGAR/CAMBIAR FOTO EN RECETA EXISTENTE ---
+@app.post("/receta/{receta_id}/foto", response_class=HTMLResponse)
+def agregar_foto_receta(
+    request: Request,
+    receta_id: int,
+    foto: Annotated[UploadFile, File()]
+):
+    """Agrega o actualiza la foto de una receta existente."""
+    receta = engine.obtener_por_id(receta_id)
+    if not receta:
+        return Response(status_code=404)
+
+    if foto and foto.filename:
+        ext = os.path.splitext(foto.filename)[1]
+        nombre_archivo = f"{uuid.uuid4().hex}{ext}"
+        ruta_archivo = os.path.join(UPLOAD_DIR, nombre_archivo)
+        
+        # Guardar la nueva foto en el disco
+        with open(ruta_archivo, "wb") as buffer:
+            shutil.copyfileobj(foto.file, buffer)
+        
+        # Actualizar la propiedad imagen_url en el objeto y guardar en JSON
+        receta["imagen_url"] = f"/static/uploads/{nombre_archivo}"
+        engine._guardar_en_disco()
+
+    return templates.TemplateResponse(
+        request=request,
+        name="partials/detalle_receta.html",
+        context={"receta": receta},
+    )

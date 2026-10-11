@@ -87,7 +87,7 @@
     },
     {
         "id": 4,
-        "nombre": "Panai Integral",
+        "nombre": "Pan Integral",
         "categoria": "Panadería",
         "origen": "Internacional",
         "dificultad": "Media",
@@ -118,5 +118,141 @@
         ],
         "nota": "El agua tibia a 35°C activa eficientemente la levadura junto con el extracto de malta.\n   •  Para crear una corteza más dorada y crujiente subir el pan y aumentar 5min de calor.",
         "imagen_url": "/static/uploads/3ce06758eda74424ad986eb69b0adcea.jpeg"
+    },
+    {
+        "id": 5,
+        "nombre": "Ensalada de Salmón Rosado",
+        "categoria": "Ensaladas / Entradas",
+        "origen": "Internacional",
+        "dificultad": "Fácil",
+        "tiempo_preparacion_min": 15,
+        "porciones": null,
+        "ingredientes": [
+            "Salmón ahumado",
+            "Rúcula",
+            "Lechuga",
+            "Tomates cherry",
+            "Almendras",
+            "Remolacha a la vinagreta dulce",
+            "Miel",
+            "Sal"
+        ],
+        "pasos": [
+            "Lavar y trocear las hojas de rúcula y lechuga.",
+            "Cortar los tomates cherry al medio y picar las almendras.",
+            "Mezclar las hojas con los cherrys, las almendras y la remolacha.",
+            "Disponer las lonjas de salmón ahumado por encima.",
+            "Emulsionar la miel con una pizca de sal y aderezar."
+        ],
+        "etiquetas": [
+            "Saludable",
+            "Fresco",
+            "Sin TACC",
+            "Gourmet"
+        ],
+        "nota": "Las cantidades de los ingredientes se ajustan a gusto según la cantidad de comensales."
+    },
+    {
+        "id": 6,
+        "nombre": "Frijoles con Plátano Maduro",
+        "categoria": "Plato Principal / Guiso",
+        "origen": "Colombia",
+        "dificultad": "Media",
+        "tiempo_preparacion_min": 90,
+        "porciones": 6,
+        "ingredientes": [
+            "500g Frijoles rojos (100%)",
+            "3 Plátanos maduros",
+            "1 Panela",
+            "Cerdos: Peceto y costillas",
+            "Vegetales: Cebolla, verdeo, tomate, morrón, ajo y zanahoria",
+            "Condimentos: Sal, pimienta, orégano, ají molido, comino, laurel y romero",
+            "Agua"
+        ],
+        "pasos": [
+            "Hervir los frijoles con poca agua y reservar sin colar.",
+            "Picar los vegetales y cortar las carnes de cerdo.",
+            "Sofreír las carnes con los vegetales y la panela hasta dorar.",
+            "Agregar los frijoles con su agua de cocción y plátano en trozos.",
+            "Condimentar y cocinar a fuego lento hasta espesar."
+        ],
+        "etiquetas": [
+            "Guiso",
+            "Latino de Cuchara",
+            "Tradicional"
+        ],
+        "nota": "Las cantidades de carnes, vegetales y condimentos se ajustan a gusto según la densidad deseada."
+    },
+    {
+        "id": 7,
+        "nombre": "Sopa Paraguaya",
+        "categoria": "Panadería / Salado",
+        "origen": "Paraguay",
+        "dificultad": "Media",
+        "tiempo_preparacion_min": 75,
+        "porciones": 2,
+        "ingredientes": [
+            "500g Harina de maíz (harina paraguaya) (100%)",
+            "1000g Cebollas (200%)",
+            "400g Queso fresco (80%)",
+            "350g Queso Mar del Plata (70%)",
+            "250g Queso Sardo (50%)",
+            "250cc Leche (50%)",
+            "50cc Aceite (10%)",
+            "15g Azúcar (1 cda) (3%)",
+            "6 Choclos grandes (o 7 chicos)",
+            "11 Huevos grandes (o 12 chicos)",
+            "Sal y pimienta (a gusto)"
+        ],
+        "pasos": [
+            "Rehogar cebollas en aceite, apagar e incorporar el azúcar y la mitad de la leche.",
+            "Cortar en cubos el queso fresco y Mar del Plata; rallar el Sardo.",
+            "Desgranar y procesar choclos con un chorrito de leche.",
+            "Mezclar en un bol harina de maíz, condimentos, choclos, quesos y cebollas.",
+            "Batir huevos a punto nieve e integrar con movimientos envolventes.",
+            "Verter en 2 fuentes aceitadas y hornear a 180°C de 45 a 60 min.",
+            "Retirar del horno y bañar con la leche restante."
+        ],
+        "etiquetas": [
+            "Tradicional",
+            "Sin TACC",
+            "Típico"
+        ],
+        "nota": "Bañar la preparación recién salida del horno con el resto de la leche aporta una textura extra húmeda.",
+        "imagen_url": "/static/uploads/98d743b3844a4e44950ed19321fad787.webp"
+    },
+    {
+        "id": 8,
+        "nombre": "Budín de Pan Tipo Flan",
+        "categoria": "Postres / Repostería",
+        "origen": "Argentina",
+        "dificultad": "Fácil",
+        "tiempo_preparacion_min": 105,
+        "porciones": 8,
+        "ingredientes": [
+            "1000g Leche entera (100%)",
+            "300g Pan lactal o miga de pan (30%)",
+            "200g Azúcar (para caramelo) (20%)",
+            "160g Azúcar (para la mezcla) (16%)",
+            "5 Huevos",
+            "Pasas de uva (a gusto)",
+            "Esencia de vainilla (a gusto)",
+            "Ralladura de limón o naranja (a gusto)"
+        ],
+        "pasos": [
+            "Hacer caramelo con 200g de azúcar y cubrir el molde.",
+            "Remojar el pan en la leche tibia hasta desmenuzar.",
+            "Mezclar los huevos, 160g de azúcar, vainilla, ralladura y pasas.",
+            "Integrar la mezcla de leche y pan desmenuzado.",
+            "Verter en el molde acaramelado, cubrir con aluminio con hendidura central.",
+            "Hornear a baño María a 160°C durante 1 hora y 30 min."
+        ],
+        "etiquetas": [
+            "Postre",
+            "Clásico",
+            "Económico"
+        ],
+        "nota": "El tapado con aluminio evita que la superficie se reseque durante la cocción prolongada."
     }
+    
 ]
